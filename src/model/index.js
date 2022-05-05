@@ -1,8 +1,9 @@
 const { Sequelize, DataTypes } = require('sequelize');
-
+const path = require('path')
+;
 const sequelize = new Sequelize({
   dialect: 'sqlite',
-  storage: 'tarot.sqlite'
+  storage: path.join(__dirname, '/data.sqlite')
 });
 
 const db = {};
